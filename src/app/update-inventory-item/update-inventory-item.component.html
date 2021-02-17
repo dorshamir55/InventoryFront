@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Update Inventory Item</h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name"
+                [(ngModel)] = "inventoryItem.name" name="name">
+        </div>
+    
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="number" class="form-control" id="amount"
+                [(ngModel)] = "inventoryItem.amount" name="amount">
+                <div [ngStyle]="{'color': 'red'}">{{error}}</div>
+        </div>
+    
+        <div class="form-group">
+            <label>Inventory Code</label>
+            <input type="text" class="form-control" id="inventory-code"
+                [(ngModel)] = "inventoryItem.inventoryCode" name="inventory-code">
+        </div>
+    
+        <button class="btn btn-success" type="submit">submit</button>
+    </form>
+</div>
